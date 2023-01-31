@@ -127,7 +127,6 @@ header.window-scroll .mainNavigation li a::before {
   width: 20px;
   height: 3px;
   background-color: #fff;
-  color: #fff;
   position: absolute;
   bottom: 12px;
   border-radius: 5px;
@@ -138,8 +137,7 @@ header.window-scroll .mainNavigation li a::before {
   content: "";
   width: 0px;
   height: 3px;
-  background-color: #fff;
-  color: #fff;
+  background-color: #fff; 
   position: absolute;
   bottom: 12px;
   border-radius: 5px;
@@ -269,8 +267,7 @@ header.window-scroll .searchContainer a.theme-btn {
   color: #fff;
   padding: 10px 20px;
   font-weight: 500;
-  border-radius: 8px;
-  -webkit-transition: all 0.5s ease-in-out;
+  border-radius: 8px; 
   transition: all 0.5s ease-in-out;
   text-transform: uppercase;
   position: relative;
@@ -478,7 +475,7 @@ header.window-scroll .searchContainer a.theme-btn {
   padding: 15px 20px;
   font-weight: 500;
   border-radius: 8px;
-  -webkit-transition: all 0.5s ease-in-out;
+  
   transition: all 0.5s ease-in-out;
   text-transform: uppercase;
   position: relative;
@@ -578,22 +575,11 @@ header.window-scroll .searchContainer a.theme-btn {
   top: -1.1px;
   height: 7px;
   width: 8px;
-  background-color: #fff;
-  -webkit-animation: heading-move 5s infinite linear;
+  background-color: #fff; 
   animation: heading-move 5s infinite linear;
 }
 
-@-webkit-keyframes heading-move {
-  0% {
-    transform: translateX(-1px);
-  }
-  50% {
-    transform: translateX(85px);
-  }
-  100% {
-    transform: translateX(-1px);
-  }
-}
+ 
 @keyframes heading-move {
   0% {
     transform: translateX(-1px);
