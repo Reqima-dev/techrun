@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "./responsive.css";
 
-
 :root {
   --font-family: "Roboto", sans-serif;
   --font-family-two: "Barlow", sans-serif;
@@ -37,6 +36,42 @@ body {
   font-weight: 400;
   color: var(--color-one);
   line-height: 1.8;
+}
+.theme-btn {
+  font-size: 16px;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 8px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  background: #896eff;
+  box-shadow: 0 3px 24px rgb(0 0 0/10%);
+}
+.theme-btn:hover {
+  color: #fff;
+}
+.theme-btn::before {
+  content: "";
+  position: absolute;
+  background: #1f2471;
+  height: 100%;
+  width: 0;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.theme-btn:hover::before {
+  width: 100%;
 }
 
 .header {
@@ -137,7 +172,7 @@ header.window-scroll .mainNavigation li a::before {
   content: "";
   width: 0px;
   height: 3px;
-  background-color: #fff; 
+  background-color: #fff;
   position: absolute;
   bottom: 12px;
   border-radius: 5px;
@@ -156,24 +191,6 @@ header.window-scroll .mainNavigation li a::before {
 .searchContainer a.serachBtn {
   font-size: 20px;
   color: #fff;
-}
-
-.searchContainer a.theme-btn {
-  font-size: 16px;
-  padding: 10px 20px;
-  font-weight: 500;
-  border-radius: 8px;
-  text-transform: uppercase;
-  position: relative;
-  cursor: pointer;
-  text-align: center;
-  overflow: hidden;
-  z-index: 1;
-  border: none;
-  background: #fff;
-  color: #896eff;
-  box-shadow: 0 3px 24px rgb(0 0 0 / 10%);
-  transition: var(--transition);
 }
 
 .searchContainer a.theme-btn:hover {
@@ -267,7 +284,7 @@ header.window-scroll .searchContainer a.theme-btn {
   color: #fff;
   padding: 10px 20px;
   font-weight: 500;
-  border-radius: 8px; 
+  border-radius: 8px;
   transition: all 0.5s ease-in-out;
   text-transform: uppercase;
   position: relative;
@@ -385,6 +402,10 @@ header.window-scroll .searchContainer a.theme-btn {
   position: relative;
 }
 
+.choice_area {
+  background-color: #f8f9ff;
+}
+
 .about_area .container {
   display: flex;
   align-items: center;
@@ -400,6 +421,9 @@ header.window-scroll .searchContainer a.theme-btn {
   justify-content: center;
 }
 
+.about_area .container .right {
+  position: relative;
+}
 .about_area .container .left img {
   width: 550px;
   height: 100%;
@@ -467,38 +491,6 @@ header.window-scroll .searchContainer a.theme-btn {
 .about_area .container .right ul li p {
   color: #000;
   margin: 0;
-}
-
-.about_area .container .right a.aboutBTN {
-  font-size: 16px;
-  color: #fff;
-  padding: 15px 20px;
-  font-weight: 500;
-  border-radius: 8px;
-  
-  transition: all 0.5s ease-in-out;
-  text-transform: uppercase;
-  position: relative;
-  cursor: pointer;
-  text-align: center;
-  overflow: hidden;
-  z-index: 1;
-  border: none;
-  background: #896eff;
-  box-shadow: 0 3px 24px rgb(0 0 0 / 10%);
-  margin-top: 15px;
-}
-
-.about_area .container .right a.aboutBTN:hover::before {
-  content: "";
-  position: absolute;
-  background: #1f2471;
-  height: 100%;
-  width: 0;
-  left: 0;
-  top: 0;
-  transition: all 0.5s ease-in-out;
-  z-index: -1;
 }
 
 .service_area {
@@ -575,11 +567,22 @@ header.window-scroll .searchContainer a.theme-btn {
   top: -1.1px;
   height: 7px;
   width: 8px;
-  background-color: #fff; 
+  background-color: #fff;
+  -webkit-animation: heading-move 5s infinite linear;
   animation: heading-move 5s infinite linear;
 }
 
- 
+@-webkit-keyframes heading-move {
+  0% {
+    transform: translateX(-1px);
+  }
+  50% {
+    transform: translateX(85px);
+  }
+  100% {
+    transform: translateX(-1px);
+  }
+}
 @keyframes heading-move {
   0% {
     transform: translateX(-1px);
@@ -801,7 +804,7 @@ header.window-scroll .searchContainer a.theme-btn {
 .blogContainerPage .button_messages button.current,
 .blogContainerPage .button_messages button:hover {
   color: #fff;
-  background: #896EFF;
+  background: #896eff;
   border-radius: 5px;
 }
 
@@ -825,6 +828,236 @@ header.window-scroll .searchContainer a.theme-btn {
   }
 }
 
-.filter-item  .delete {
+.filter-item .delete {
   display: none;
+}
+
+.fliterDiv {
+  margin-bottom: 25px;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.fliterDiv:hover {
+  transform: translateY(-10px);
+}
+
+.fliterDiv .case_img img {
+  border-radius: 8px;
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+}
+.blogContenaire {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.fliterDiv .case_content {
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  position: absolute;
+  padding: 15px 15px 15px 18px;
+  background: #fff;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 3px 24px rgb(0 0 0 / 10%);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.case_content .case-content-info small {
+  color: #896eff;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.case-content-info h4 {
+  color: #1f2471;
+  margin: 0;
+  font-weight: 600;
+  font-family: var(--font-family-two);
+  line-height: 1.2;
+}
+
+.case-content-info a {
+  font-size: 22px;
+  color: #1f2471;
+  transition: var(--transition);
+}
+
+.case-content-info a:hover {
+  color: #5f3bff;
+}
+
+.case-arrow {
+  font-size: 25px;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50px;
+  text-align: center;
+  background: #896eff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.case-arrow:hover {
+  background: #1f2471;
+}
+
+.case-arrow span {
+  font-size: 25px;
+}
+
+.case-arrow::before {
+  content: "";
+  position: absolute;
+  border: 3px solid #896eff;
+  border-radius: 50px;
+  right: -6px;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.case-arrow:hover::before {
+  border-color: #1f2471;
+}
+
+.choose-content {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.choose-content li {
+  display: block;
+  margin-bottom: 20px;
+  padding: 40px 15px;
+  cursor: pointer;
+  padding-left: 40px;
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+.choose-content li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #896eff;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.choose-content li:hover::before {
+  width: 100%;
+  transform: translateY(-10px);
+}
+
+.choose-content li:hover h5,
+.choose-content li:hover p,
+.choose-content li:hover span {
+  color: #fff !important;
+}
+
+.choose-content li span {
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  color: #896eff !important;
+  font-weight: 600 !important;
+  font-size: 25px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.choose-content li:hover .chooseBOx {
+  transform: translateY(-10px);
+}
+
+.choose-content .chooseBOx {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+.choose-content li h5 {
+  text-transform: capitalize;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #1f2471;
+  font-family: var(--font-family-two);
+  transition: all 0.3s ease-in-out;
+}
+
+.choose-content li p {
+  color: var(--color-one) !important;
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 1.8;
+  transition: all 0.3s ease-in-out;
+}
+
+.video-area {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 120px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 120px;
+}
+.video-wrapper {
+  position: relative;
+}
+.video-wrapper img {
+  border-radius: 12px;
+  height: auto;
+  width: 100%;
+}
+
+.video-area .play-btn {
+  display: inline-block;
+  padding: 0;
+  height: 75px;
+  width: 75px;
+  text-align: center;
+  background: #fff;
+  color: #896eff;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-area .play-btn span {
+  font-size: 50px;
+  background: #fff;
 }
