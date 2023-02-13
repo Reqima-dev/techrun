@@ -37,3 +37,48 @@ for (let i = 0; i < sortBtn.length; i++) {
 }
 
 /*----End  filtre blog ----*/
+
+/// TESTIMONIALS
+function initParadoxWay() {
+  "use strict";
+
+  if ($(".testimonials-carousel").length > 0) {
+    var swiper = new Swiper(".testimonials-carousel .swiper-container", {
+      preloadImages: false,
+      slidesPerview: 1,
+      spaceBetween: 20,
+      loop: true,
+      grabCursor: true,
+      mousewheel: false,
+      centeredSlides: true,
+      pagination: {
+        el: ".tc-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      navigation: {
+        nextEl: ".listing-carousel-button-next",
+        prevEl: ".listing-carousel-button-prev",
+      },
+      autoplay: {
+        delay: 1000,
+      },
+
+      breakpoints: {
+        // when windows width is > = 600px
+
+        600: {
+          slidesPerView: 2,
+        },
+        // when windows width is > = 1024px
+
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  }
+}
+$(document).ready(function () {
+  initParadoxWay();
+});
