@@ -1,0 +1,205 @@
+.caseFilterContainer .filterBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.cases_areaContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 125px;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+}
+.caseFilterContainer .filterBtn button {
+  font-size: 17px;
+  border: none;
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 10px;
+  font-weight: 500;
+  color: #1f2471;
+  padding: 10px 17px;
+  border-radius: 8px;
+  background: #eef1f6;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.caseFilterContainer .filterBtn button.current,
+.caseFilterContainer .filterBtn button:hover {
+  color: #fff;
+  background: #896eff;
+  border-radius: 5px;
+}
+
+.filter-item {
+  margin-bottom: 25px;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.filter-item:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+.filter-item .case_img {
+  width: 400px;
+  height: 400px;
+}
+.filter-item .case_img img {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.filter-item .case_content {
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  position: absolute;
+  padding: 15px 15px 15px 18px;
+  background: #fff;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 3px 24px rgb(0 0 0 / 10%);
+  overflow: hidden;
+  z-index: 1;
+}
+.filter-item-active {
+  position: relative;
+  animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+.case-content-info {
+  display: flex;
+  flex-direction: column;
+}
+.case_content .case-content-info small {
+  color: #896eff;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.case-content-info .case-title {
+  color: #1f2471;
+  margin: 0;
+  font-weight: 600;
+  font-family: var(--font-family-two);
+  line-height: 1.2;
+  font-size: 20px;
+  transition: var(--transition);
+}
+.case-content-info .case-title:hover {
+  color: #5f3bff;
+}
+.case-arrow {
+  font-size: 25px;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50px;
+  text-align: center;
+  background: #896eff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+.case-arrow:hover {
+  background: #1f2471;
+}
+.case-arrow span {
+  font-size: 25px;
+}
+.case-arrow::before {
+  content: "";
+  position: absolute;
+  border: 3px solid #896eff;
+  border-radius: 50px;
+  right: -6px;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+.case-arrow:hover::before {
+  border-color: #1f2471;
+}
+
+@media screen and (min-width: 1115px) {
+  .caseFilterContext {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    width: 1100px;
+    height: 100%;
+  }
+  .filter-item {
+    justify-self: center;
+  }
+}
+@media screen and (max-width: 1115px) {
+  .caseFilterContext {
+    display: grid;
+    justify-self: center;
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cases_areaContent {
+    padding: 0;
+  }
+  .filter-item {
+    width: 400px;
+    justify-self: center;
+  }
+  .filter-item-active {
+    justify-self: center;
+  }
+}
+@media screen and (max-width: 867px) {
+  .caseFilterContext {
+    grid-template-columns: 1fr;
+  }
+  .caseFilterContainer .filterBtn {
+    gap: 0;
+    flex-wrap: wrap;
+  }
+  .filter-item .case_img {
+    width: 100%;
+  }
+  .filter-item {
+    width: 100%;
+  }
+  .caseFilterContainer {
+    padding: 0 25px;
+  }
+  .headArea .site-title {
+    font-size: 38px;
+  }
+}

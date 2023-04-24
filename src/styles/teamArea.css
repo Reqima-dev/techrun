@@ -1,0 +1,116 @@
+.teamArea {
+  background: transparent;
+}
+
+.teamBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 5px 50px;
+}
+.teamBox .team-item {
+  border-radius: 15px;
+  margin-bottom: 60px;
+  box-shadow: 0 3px 24px rgb(0 0 0 / 10%);
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  height: 350px;
+}
+
+.team-item:hover {
+  transform: translateY(-10px);
+}
+.team-item img {
+  border-radius: 8px;
+  width: 260px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-content {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: -40px;
+  background-image: linear-gradient(90deg, #896eff 0, #5f3bff 51%, #896eff);
+  text-align: center;
+  padding: 5px 10px 5px 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 3px 24px rgb(0 0 0/10%);
+}
+.team-bio {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.team-bio h5 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-family: var(--font-family-two);
+  line-height: 1.2;
+  color: #fff;
+}
+.team-bio span {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.team-social {
+  position: absolute;
+  margin-bottom: 10px;
+  text-align: center;
+  top: 15px;
+  right: -15px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.team-item:hover .team-social {
+  opacity: 1;
+  right: 15px;
+}
+.team-social a {
+  display: block;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  margin-top: 8px;
+  background-image: linear-gradient(90deg, #896eff 0, #5f3bff 51%, #896eff);
+}
+.team-social a i {
+  font-size: 18px;
+}
+.team-social a:hover {
+  background: #fff;
+  color: #896eff;
+}
+
+@media screen and (max-width: 1115px) {
+  .teamBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .teamBox {
+    grid-template-columns: 1fr;
+  }
+
+  .team-social {
+    right: 0;
+    opacity: 1;
+  }
+  .team-item img {
+    width: 342px;
+  }
+}

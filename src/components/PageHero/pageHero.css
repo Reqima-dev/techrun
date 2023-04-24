@@ -1,0 +1,75 @@
+.site-breadcrumb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding-top: 190px;
+  padding-bottom: 150px;
+  background-image: linear-gradient(90deg, #896eff 0, #5f3bff 51%, #896eff);
+  z-index: 1;
+}
+.site-breadcrumb::before {
+  content: "";
+  position: absolute;
+  background-image: url(../../assets/shape-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.breadcrumb-shape {
+  position: absolute;
+  bottom: -4px;
+  left: 0px;
+}
+.breadcrumb-shape img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.page_heroContent {
+  /* margin: 0 5rem; */
+  width: 100%;
+  /* max-width: 1185px; */
+  z-index: 1;
+}
+
+.breadcrumb-title {
+  font-family: "Barlow", sans-serif;
+  line-height: 1.2;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.heroBackLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 17px;
+  /* gap: 10px; */
+}
+.heroBackLink button {
+  background: transparent;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  color: #fff;
+}
+.currentPage {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.currentPage i {
+  font-size: 18px;
+}

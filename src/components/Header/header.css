@@ -1,0 +1,227 @@
+.header {
+  justify-content: space-between;
+  align-items: center;
+  /* background: #1f2471; */
+  display: flex;
+  height: 5vh;
+  left: 0;
+  padding: 40px 100px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  max-width: 100%;
+  z-index: 5;
+}
+
+.header_active {
+  box-shadow: 0 0 15px rgb(0 0 0 / 17%);
+  animation: slide-down 0.7s;
+  background-color: #fff;
+  z-index: 10;
+  width: 100%;
+  justify-content: center;
+  gap: 60px;
+}
+
+.header_active .logoDisplay {
+  display: none;
+}
+
+.logoScrolled {
+  display: none;
+}
+
+.header_active .logoScrolled {
+  display: block;
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.header_active .mainNavigation a,
+.header_active .searchContainer a.serachBtn {
+  color: #1f2471;
+}
+
+.header_active .barIco {
+  color: #1f2471;
+}
+
+.header_active .mainNavigation a:hover {
+  color: #896eff;
+}
+.header_active .mainNavigation a.active::before,
+.header_active .mainNavigation a::before {
+  background-color: #896eff;
+}
+
+.logoHeader {
+  width: 220px;
+  height: 45px;
+}
+.logoHeader:hover img {
+  transform: scale(1.1);
+}
+
+.logoHeader img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+  object-fit: cover;
+}
+
+.mainNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.mainNavigation a {
+  position: relative;
+  margin-right: 22px;
+  padding: 28px 0;
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.mainNavigation a.nav__active::before {
+  content: "";
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 20px;
+  border-radius: 5px;
+}
+.header_active a.nav__active::before {
+  background-color: #896eff;
+}
+
+.mainNavigation a::before {
+  content: "";
+  width: 0px;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 20px;
+  border-radius: 5px;
+  transition: var(--transition);
+}
+
+.mainNavigation a:hover::before {
+  width: 20px;
+}
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+.searchContainer a.serachBtn {
+  font-size: 20px;
+  color: #fff;
+}
+
+.searchContainer a.theme-btn:hover {
+  background-color: #1f2471;
+  color: #fff;
+}
+.barIco {
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: var(--transition);
+  display: none;
+}
+.barIco:hover {
+  transform: scale(1.5);
+}
+
+/*--------------- RESPONSIVE ---------------------------*/
+@media screen and (max-width: 1115px) {
+  .header {
+    padding: 40px 3.5rem;
+  }
+  .logoHeader {
+    width: 161px;
+    height: 36px;
+  }
+
+  .header_active {
+    justify-content: space-between;
+  }
+  .logoHeader {
+    width: 190px;
+    height: 36px;
+  }
+  .barIco {
+    display: block !important;
+  }
+  .header .navMobile {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 80px;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    transition: var(--transition);
+  }
+  .header .navMobile .mainNavigation a {
+    color: #1f2471;
+  }
+  .header a.nav__active::before {
+    background-color: #896eff;
+  }
+  .header .navMobile_active {
+    right: 0px;
+  }
+
+  .header .navMobile .mainNavigation {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0;
+  }
+
+  .mainNavigation a {
+    padding: 25px 0;
+
+    width: 100%;
+    padding-left: 25px;
+    transition: var(--transition);
+  }
+  .mainNavigation a:hover {
+    background-color: #1f2471;
+  }
+  .header_active .mainNavigation a.nav__active {
+    background-color: transparent;
+  }
+
+  .searchContainer .btnQuote {
+    display: none;
+  }
+
+  .searchContainer {
+    align-items: right;
+    justify-content: right;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 40px 1.5rem;
+  }
+}

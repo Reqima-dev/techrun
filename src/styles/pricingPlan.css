@@ -1,0 +1,96 @@
+.pricing_area {
+  background: transparent;
+}
+.pricingBOX {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 20px 70px;
+}
+.pricingBOX .pricing-item {
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 40px 5px rgb(0 0 0 / 5%);
+  transition: all 0.5s ease-in-out;
+  width: 320px;
+  height: 100%;
+}
+.pricing-item:hover {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+.pricing-header {
+  text-align: left;
+  display: inline-block;
+  padding: 10px 40px;
+  background-image: linear-gradient(90deg, #896eff 0, #5f3bff 51%, #896eff);
+  border-radius: 0 0 50% 50%;
+  position: relative;
+}
+.pricing-header h5 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: var(--font-family-two);
+}
+.pricing-amount {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  position: relative;
+  border-bottom: 3px solid #896eff;
+}
+.pricing-amount strong {
+  font-size: 60px;
+  font-weight: 700;
+  color: #1f2471;
+}
+.pricing-amount-type {
+  position: relative;
+  margin-top: -20px;
+  z-index: 1;
+}
+.pricing-amount-type span {
+  background: #896eff;
+  display: inline-block;
+  padding: 4px 20px;
+  color: #fff;
+  border-radius: 50px;
+}
+.pricing-feature {
+  padding: 30px 0;
+}
+.pricing-feature li {
+  margin-bottom: 15px;
+}
+.pricing-feature li i {
+  color: #896eff;
+  margin-right: 5px;
+}
+
+.pricing-footer {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1115px) {
+  .pricingBOX {
+    gap: 20px;
+  }
+  .pricingBOX .pricing-item {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .pricingBOX {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 15px;
+  }
+}
+@media screen and (max-width: 743px) {
+  .pricingBOX .pricing-item {
+    width: 100%;
+  }
+}

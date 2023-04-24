@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --font-family: "Roboto", sans-serif;
+  --font-family-two: "Barlow", sans-serif;
+  --color-one: #757f95;
+  --color-two: #fff;
+
+  --transition: 0.4s ease;
+
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  position: relative;
+  scroll-behavior: smooth;
+}
+a,
+a:active,
+a:focus,
+a:hover {
+  outline: none;
+}
+
+body {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-one);
+  line-height: 1.8;
+}
+.container {
+  max-width: 100%;
+  width: 1368px;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ===================
+theme button
+====================== */
+
+.theme-btn {
+  font-size: 16px;
+  color: #fff;
+  padding: 14px 20px;
+  font-weight: 500;
+  border-radius: 8px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  background: #896eff;
+  font-family: "Barlow", sans-serif;
+  box-shadow: 0 3px 24px rgb(0 0 0 / 10%);
+}
+.theme-btn a {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.theme-btn:hover {
+  color: #fff;
+}
+
+.theme-btn::before {
+  content: "";
+  position: absolute;
+  background: #1f2471;
+  height: 100%;
+  width: 0;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.theme-btn:hover::before {
+  width: 100%;
+}

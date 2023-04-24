@@ -1,0 +1,104 @@
+.boxWorks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.boxWorks .works .process-single {
+  position: relative;
+  text-align: center;
+  width: 250px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.boxWorks .works .process-single::before {
+  content: "";
+  position: absolute;
+  border-bottom: 2px dashed #896eff;
+  width: 110px;
+  height: 2px;
+  right: -65px;
+  top: 50px;
+}
+.boxWorks .works:last-child .process-single::before {
+  display: none;
+}
+.process-single .icon {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 45px;
+  color: #896eff;
+  border: 3px solid #896eff;
+  padding: 5px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 24px rgb(0 0 0 / 10%);
+}
+
+.process-single span {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  font-size: 14px;
+  background: #896eff;
+  line-height: 35px;
+  color: #fff;
+  left: -3px;
+  top: -13px;
+  font-weight: 600;
+  border-radius: 33% 66% 70% 30%/49% 62% 38% 51%;
+}
+
+.process-single img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+.process-single h4 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #1f2471;
+  font-weight: 600;
+  font-family: var(--font-family-two);
+  line-height: 1.2;
+}
+@media screen and (max-width: 1115px) {
+  .boxWorks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .boxWorks .works .process-single::before {
+    display: none;
+  }
+  .boxWorks .works .process-single {
+    width: 430px;
+  }
+  .process-single p {
+    padding: 0 35px;
+  }
+}
+@media screen and (max-width: 857px) {
+  .boxWorks {
+    gap: 20px;
+  }
+  .boxWorks .works .process-single {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 622px) {
+  .boxWorks {
+    gap: 30px;
+    grid-template-columns: 1fr;
+  }
+  .process-single p {
+    padding: 0 15px;
+  }
+}
