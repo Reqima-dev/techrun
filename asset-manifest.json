@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/techrun/static/css/main.679657b6.css",
-    "main.js": "/techrun/static/js/main.00e20f5d.js",
+    "main.js": "/techrun/static/js/main.f49a659c.js",
     "static/media/video.png": "/techrun/static/media/video.722d7c0bf18c482ab035.png",
     "static/media/01 (1).png": "/techrun/static/media/01 (1).9c133936f32f1f77bf8f.png",
     "static/media/01 (2).png": "/techrun/static/media/01 (2).0be254b30a98d0b29d09.png",
@@ -37,10 +37,10 @@
     "index.html": "/techrun/index.html",
     "static/media/shape-4.svg": "/techrun/static/media/shape-4.ee59ff3eff6d807905585f3cb48757b7.svg",
     "main.679657b6.css.map": "/techrun/static/css/main.679657b6.css.map",
-    "main.00e20f5d.js.map": "/techrun/static/js/main.00e20f5d.js.map"
+    "main.f49a659c.js.map": "/techrun/static/js/main.f49a659c.js.map"
   },
   "entrypoints": [
     "static/css/main.679657b6.css",
-    "static/js/main.00e20f5d.js"
+    "static/js/main.f49a659c.js"
   ]
 }
